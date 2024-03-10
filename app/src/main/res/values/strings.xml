@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Pocket Journal</string>
+
+    <!-- Day of week titles for calendar on home page -->
+    <string name="essential_calendar_mon">Mon</string>
+    <string name="essential_calendar_tue">Tue</string>
+    <string name="essential_calendar_wed">Wed</string>
+    <string name="essential_calendar_thu">Thu</string>
+    <string name="essential_calendar_fri">Fri</string>
+    <string name="essential_calendar_sat">Sat</string>
+    <string name="essential_calendar_sun">Sun</string>
+
+    <!-- Quick options titles -->
+    <string name="quick_option_journal">Journal</string>
+    <string name="quick_option_omissions">Omissions</string>
+    <string name="quick_option_export_to">Export to</string>
+
+    <!-- Bottom bar destinations -->
+    <string name="dest_home">Home</string>
+    <string name="dest_omissions">Omissions</string>
+    <string name="dest_journal">Journal</string>
+    <string name="dest_settings">Settings</string>
+
+    <!-- Bottom bar slider labels -->
+    <string name="bot_bar_slider_students">Student\'s list</string>
+    <string name="bot_bar_slider_subjects">Subject\'s list</string>
+    <string name="bot_bar_slider_settings">Go to the settings</string>
+
+</resources>
