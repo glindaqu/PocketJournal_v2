@@ -1,7 +1,5 @@
 package ru.glindaqu.pocketjournal_v2_compose.uiComponents.essentialCalendar
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -25,7 +23,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.glindaqu.pocketjournal_v2_compose.DEFAULT_CARD_ELEVATION
-import ru.glindaqu.pocketjournal_v2_compose.DEFAULT_HORIZONTAL_PADDING
 import ru.glindaqu.pocketjournal_v2_compose.R
 import ru.glindaqu.pocketjournal_v2_compose.date.dayOnly
 import java.time.LocalDate
@@ -50,22 +47,19 @@ fun EssentialCalendar() {
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.onBackground,
         ),
-        modifier = Modifier
-            .padding(
-                top = 20.dp
-            )
     ) {
         Column(
-            modifier = Modifier.padding(10.dp)
+            modifier = Modifier
+                .padding(10.dp)
         ) {
             // titles
             LazyVerticalGrid(
-                columns = GridCells.Fixed(7),
                 modifier = Modifier
                     .padding(
                         vertical = 5.dp
-                    )
-            ) {
+                    ),
+                columns = GridCells.Fixed(7),
+                ) {
                 items(weekdayTitles) {
                     EssentialCalendarText(
                         it = stringResource(
@@ -100,11 +94,11 @@ fun EssentialCalendar() {
                 items((1..<dayOffset).toList()) {
                     Text("")
                 }
-                items((1.. month.length(true)).toList()) {
+                items((1..month.length(true)).toList()) {
                     EssentialCalendarNumberItem(
                         text = it.toString(),
                         isSelected = it == currentDay
-                     )
+                    )
                 }
             }
         }
