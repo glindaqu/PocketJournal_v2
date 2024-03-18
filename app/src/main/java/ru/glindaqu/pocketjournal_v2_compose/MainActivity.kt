@@ -14,6 +14,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 import ru.glindaqu.pocketjournal_v2_compose.presenters.implementation.HomePresenter
 import ru.glindaqu.pocketjournal_v2_compose.screens.Home
 import ru.glindaqu.pocketjournal_v2_compose.ui.theme.PocketJournal_v2_ComposeTheme
@@ -30,6 +32,9 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
         setContent {
+
+            val navController = rememberNavController()
+
             PocketJournal_v2_ComposeTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -54,7 +59,8 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .padding(it)
                         ) {
-                            Home()
+                            NavHost(navController = navController, startDestination = presenter.destinations.) {
+                            }
                         }
                     }
                 }
